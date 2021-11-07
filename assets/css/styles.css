@@ -1,3 +1,12 @@
+/* VARIABLE STYLES */
+:root {
+  --primary-color: #000000;
+  --secondary-color: #758499;
+  --accent-color: #009bdf;
+  --primary-background: #f6f8fa;
+  --secondary-background: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +27,8 @@
 .px-10 {
   padding: 0 10px;
 }
-.py-10 {
-  padding: 10px 0;
+.py-20 {
+  padding: 20px 0;
 }
 .m-10 {
   margin: 10px;
@@ -37,19 +46,29 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+a {
+  color: var(--primary-color);
+}
+
 h2 {
-  padding: 10px;
   margin-bottom: 10px;
 }
 
 h3 {
-  padding: 5px;
   margin-bottom: 10px;
 }
 
 p {
-  padding: 5px;
   margin: 10px 0;
+}
+
+i {
+  color: var(--accent-color);
+}
+
+hr {
+  width: 70%;
+  color: var(--accent-color);
 }
 
 /* HEADER & NAVIGATION STYLES */
@@ -57,15 +76,10 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  vertical-align: middle;
-  line-height: 30px;
 }
 
 .topnav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .topnav li a {
@@ -76,7 +90,8 @@ header {
 /* HERO SECTION STYLES */
 .hero {
   height: 400px;
-  margin: 40px;
+  margin: 40px 0;
+  background-color: var(--primary-background);
 }
 
 .hero-content {
@@ -89,17 +104,15 @@ header {
   margin-left: 25%;
 }
 
-.hero-content h3,
-h2,
-p {
-  padding: 10px 0;
-}
-
 .hero-content h3 {
+  font-size: 14px;
+  color: var(--secondary-color);
   width: 200px;
   height: 50px;
   position: relative;
   z-index: 1;
+  padding: 0;
+  padding-top: 20px;
 }
 
 .hero-content h3:before {
@@ -111,16 +124,137 @@ p {
   width: 35%; /* or 100px */
   border-bottom: 1px solid magenta;
 }
+
 .hero img {
   float: right;
   border-radius: 50%;
   width: 300px;
+  padding-top: 20px;
 }
 /* END HERO SECTION STYLING */
 
 /* ABOUT ME SECTION STYLING */
-#about h4 {
-  font-size: 10px;
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+#about h4 {
+  display: flex;
+  font-size: 14px;
+  color: var(--accent-color);
+}
 
+#about .about-tagline {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#about .flex-row {
+  display: flex;
+}
+
+#about h2 {
+  display: flex;
+  font-size: 24px;
+  color: var(--accent-color);
+  width: 50%;
+  align-items: center;
+}
+
+#about .about-detailed {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  float: right;
+  color: var(--secondary-color);
+}
+/* END ABOUT ME SECTION STYLING */
+
+/* SERVICES SECTION STYLING */
+#services {
+  background-color: var(--primary-background);
+  display: flex;
+  align-items: center;
+}
+
+#services .flex-row {
+  display: flex;
+}
+/* END SERVICES SECTION STYLING */
+
+/* SKILLS & EXPERIENCE SECTION STYLING */
+#skills-experience .flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.skill-items progress {
+  width: 90%;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.experiences h3 {
+  color: var(--accent-color);
+  padding-top: 20px;
+  margin: 0;
+}
+
+.experiences h4 {
+  color: var(--secondary-color);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.experiences p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.experience .flex-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+  padding-right: 5px;
+}
+
+.experience .flex-right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 75%;
+  padding-left: 5px;
+}
+
+/* END SKILLS & EXPERIENCE SECTION STYLING */
+
+/* PORTFOLIO SECTION STYLING */
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio1 {
+  flex: 1 100%;
+  position: relative;
+}
+.portfolio-site-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* PORTFOLIO SECTION STYLING END */
