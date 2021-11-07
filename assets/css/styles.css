@@ -1,10 +1,11 @@
 /* VARIABLE STYLES */
 :root {
-  --primary-color: #000000;
-  --secondary-color: #758499;
-  --accent-color: #009bdf;
-  --primary-background: #f6f8fa;
-  --secondary-background: #ffffff;
+  --primary-color: #2a3132;
+  --secondary-color: #324851;
+  --accent-color: #763626;
+  /* --primary-background: rgba(144, 175, 197, 0.4); */
+  --primary-background: #adcde4;
+  --secondary-background: rgba(79, 100, 87, 0.4);
 }
 
 * {
@@ -14,6 +15,7 @@
   list-style: none;
   box-sizing: border-box;
   line-height: 1.6;
+  background-color: var(--primary-background);
 }
 
 /* UTILITY CLASSES */
@@ -30,6 +32,7 @@
 .py-20 {
   padding: 20px 0;
 }
+
 .m-10 {
   margin: 10px;
 }
@@ -40,93 +43,130 @@
   margin: 10px 0;
 }
 
+.xl-text {
+  font-size: 52px;
+}
+.lg-text {
+  font-size: 32px;
+}
+.md-text {
+  font-size: 24px;
+}
+.sm-text {
+  font-size: 18px;
+}
+
+.xs-text {
+  font-size: 14px;
+}
+
 /* END UTILITY CLASSES */
 
+/* GLOBAL STYLING */
 body {
   font-family: 'Playfair Display', serif;
-}
-
-a {
   color: var(--primary-color);
-}
-
-h2 {
-  margin-bottom: 10px;
-}
-
-h3 {
-  margin-bottom: 10px;
-}
-
-p {
-  margin: 10px 0;
 }
 
 i {
   color: var(--accent-color);
+  padding-right: 13px;
 }
 
 hr {
-  width: 70%;
-  color: var(--accent-color);
+  width: 40%;
+  background-color: var(--accent-color);
+  margin: 30px auto;
+  border: none;
+  height: 2px;
 }
+/* END GLOBAL STYLING */
 
 /* HEADER & NAVIGATION STYLES */
-header {
+.main-nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 10px;
+}
+
+.main-nav h1 a {
+  padding-left: 22px;
+  color: var(--primary-color);
 }
 
 .topnav ul {
   display: flex;
+  margin-right: 50px;
 }
 
 .topnav li a {
+  color: var(--secondary-color);
   padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 /* END HEADER & NAVIGATION STYLES */
 
 /* HERO SECTION STYLES */
 .hero {
-  height: 400px;
-  margin: 40px 0;
-  background-color: var(--primary-background);
+  height: 600px;
+  display: flex;
+  align-items: center;
 }
 
-.hero-content {
+.hero .flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+}
+
+.hero .flex-left {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: left;
-  justify-content: center;
-  height: 300px;
-  margin-left: 25%;
+  width: 60%;
+  align-items: space-around;
+}
+
+.hero .flex-right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 40%;
 }
 
 .hero-content h3 {
-  font-size: 14px;
   color: var(--secondary-color);
   width: 200px;
   height: 50px;
   position: relative;
   z-index: 1;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .hero-content h3:before {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 10px;
   height: 1px;
   width: 35%; /* or 100px */
-  border-bottom: 1px solid magenta;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.hero-content h2 {
+  font-size: 52px;
+  margin-bottom: -10px;
+}
+
+.hero-content p {
+  color: var(--secondary-color);
 }
 
 .hero img {
-  float: right;
+  /* float: right; */
   border-radius: 50%;
   width: 300px;
   padding-top: 20px;
@@ -134,25 +174,18 @@ header {
 /* END HERO SECTION STYLING */
 
 /* ABOUT ME SECTION STYLING */
-#about {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 #about h4 {
-  display: flex;
-  font-size: 14px;
   color: var(--accent-color);
 }
 
 #about .about-tagline {
-  font-size: 32px;
   font-weight: bold;
 }
 
 #about .flex-row {
   display: flex;
+  width: 70%;
+  margin: auto;
 }
 
 #about h2 {
@@ -160,7 +193,7 @@ header {
   font-size: 24px;
   color: var(--accent-color);
   width: 50%;
-  align-items: center;
+  align-items: start;
 }
 
 #about .about-detailed {
@@ -191,6 +224,10 @@ header {
   justify-content: space-between;
 }
 
+#skills-experience hr {
+  margin: 5px 0 5px 0;
+}
+
 .skills {
   display: flex;
   flex-direction: column;
@@ -211,6 +248,7 @@ header {
   color: var(--accent-color);
   padding-top: 20px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .experiences h4 {
@@ -221,7 +259,7 @@ header {
 
 .experiences p {
   font-size: 12px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 .experience .flex-left {
   display: flex;
@@ -238,23 +276,21 @@ header {
   width: 75%;
   padding-left: 5px;
 }
-
 /* END SKILLS & EXPERIENCE SECTION STYLING */
 
 /* PORTFOLIO SECTION STYLING */
+.main-img {
+  margin-bottom: 20px;
+}
+
 .portfolio-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.portfolio1 {
-  flex: 1 100%;
-  position: relative;
-}
 .portfolio-site-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 /* PORTFOLIO SECTION STYLING END */

@@ -16,57 +16,74 @@
     <title>Bryce Stockman - Website Sevices Portfolio</title>
   </head>
   <body>
-    <header class="m-10">
-      <h1><a href="#">BS Website Services </a></h1>
-      <nav class="topnav p-10">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header>
+      <!-- NAVIGATION SECTION -->
+      <div class="main-nav">
+        <h1><a href="#">BS Website Services </a></h1>
+        <nav class="topnav p-10">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- NAVIGATION SECTION END -->
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="container py-20">
-        <img
-          src="./assets/images/bryce-stockman-profile-picture.jpg"
-          alt="Bryce Stockman Profile Picture"
-        />
-        <div class="hero-content">
-          <div>
-            <h3>HELLO, MY NAME IS</h3>
-            <h2>Bryce Stockman</h2>
-            <p>Web Developer</p>
-            <div>
-              <p>
-                <i class="fas fa-envelope-open-text"></i>
-                BRYCE.D.STOCKMAN@GMAIL.COM
-              </p>
-              <p><i class="fas fa-phone-square-alt"></i> 801-910-8426</p>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="container">
+          <div class="flex-row">
+            <div class="flex-left">
+              <div class="hero-content">
+                <div>
+                  <h3 class="sm-text">HI, MY NAME IS</h3>
+                  <h2 class="xl-text">Bryce Stockman</h2>
+                  <p class="lg-text">Web Developer</p>
+                  <br /><br />
+                  <div class="sm-text">
+                    <p>
+                      <i class="fas fa-envelope-open-text fa-2x"></i
+                      >BRYCE.D.STOCKMAN@GMAIL.COM
+                    </p>
+                    <p>
+                      <i class="fas fa-phone-square-alt fa-2x"></i>801-910-8426
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-right">
+              <img
+                src="./assets/images/bryce-stockman-profile-picture.jpg"
+                alt="Bryce Stockman Profile Picture"
+              />
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </header>
+    <!-- HERO SECTION END -->
+
+    <hr />
 
     <!-- ABOUT ME SECTION -->
     <section id="about">
       <div class="container py-20">
-        <h4>About Me</h4>
+        <h4 class="sm-text">About Me</h4>
         <div class="about-tagline">
           <!-- to do: add a tag line that sums up my experience and ability to build websites -->
-          <p>
+          <p class="lg-text py-20">
             Tagline Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Ex, illo!
           </p>
         </div>
-        <div class="flex-row">
+        <div class="flex-row py-20">
           <h2>I design professional &amp beautiful websites</h2>
-          <div class="about-detailed">
+          <div class="about-detailed xs-text">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
               inventore sint, obcaecati officiis harum laborum quaerat omnis
@@ -86,13 +103,16 @@
         </div>
       </div>
     </section>
+    <!-- ABOUT ME SECTION END -->
+
+    <hr />
 
     <!-- SERVICES SECTION -->
     <section id="services">
       <div class="container py-20">
-        <h2>What I Do</h2>
+        <h2 class="lg-text">What I Do</h2>
         <!-- to do: add a brief description of the services I provide -->
-        <p>
+        <p class="xs-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
           dolore sit at laudantium nemo maxime odio officiis ratione consectetur
           fugiat.
@@ -100,9 +120,10 @@
 
         <div class="flex-row">
           <!-- First service -->
-          <div class="front-end-web-development">
+          <div class="web-development">
             <!-- to do: find and add an icon for web development -->
             <img src="" alt="" />
+            <i class="fas fa-laptop-code fa-3x"></i>
             <h3>WEB DEVELOPMENT</h3>
             <!-- to do: add a brief description of why websites are important and why to choose me -->
             <p>
@@ -127,6 +148,9 @@
         </div>
       </div>
     </section>
+    <!-- SERVICES SECTION END -->
+
+    <hr />
 
     <!-- SKILLS & EXPERIENCE SECTION -->
     <section id="skills-experience">
@@ -222,36 +246,41 @@
         </div>
       </div>
     </section>
+    <!-- SKILLS & EXPERIENCE SECTION END -->
+
+    <hr />
 
     <!-- PORTFOLIO SECTION -->
     <section id="portfolio">
       <div class="container py-20">
+        <div class="main-img">
+          <img
+            class="portfolio-site-img"
+            src="assets/images/run-buddy-website.jpg"
+            alt="Run Buddy Website"
+          />
+        </div>
         <div class="portfolio-items">
-          <div class="portfolio1">
-            <img
-              class="portfolio-site-img"
-              src="assets/images/run-buddy-website.jpg"
-              alt="Run Buddy Website"
-              height="300px"
-              width="300px"
-            />
-          </div>
           <div class="portfolio2">
-            <img src="https://source.unsplash.com/200x200/?website,1" alt="" />
+            <img src="https://source.unsplash.com/250x250/?website,1" alt="" />
           </div>
           <div class="portfolio3">
-            <img src="https://source.unsplash.com/200x200/?website,2" alt="" />
+            <img src="https://source.unsplash.com/250x250/?website,2" alt="" />
           </div>
           <div class="portfolio4">
-            <img src="https://source.unsplash.com/200x200/?website,3" alt="" />
+            <img src="https://source.unsplash.com/250x250/?website,3" alt="" />
           </div>
           <div class="portfolio5">
-            <img src="https://source.unsplash.com/200x200/?website,4" alt="" />
+            <img src="https://source.unsplash.com/250x250/?website,4" alt="" />
           </div>
         </div>
       </div>
     </section>
+    <!-- PORTFOLIO SECTION END -->
 
+    <hr />
+
+    <!-- CONTACT SECTION -->
     <section id="contact">
       <div class="container py-20">
         <div class="flex-row">
@@ -304,7 +333,9 @@
         </div>
       </div>
     </section>
+    <!-- CONTACT SECTION END -->
 
+    <!-- FOOTER -->
     <footer>Copyright &copy; 2021 BS Web Development - Portfolio</footer>
   </body>
 </html>
