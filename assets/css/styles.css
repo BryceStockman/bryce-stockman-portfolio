@@ -3,9 +3,9 @@
   --primary-color: #2a3132;
   --secondary-color: #324851;
   --accent-color: #763626;
-  /* --primary-background: rgba(144, 175, 197, 0.4); */
+  --secondary-accent-color: #34675c;
+  --white-color: #f1f1f2;
   --primary-background: #adcde4;
-  --secondary-background: rgba(79, 100, 87, 0.4);
 }
 
 * {
@@ -39,8 +39,8 @@
 .mx-10 {
   margin: 0 10px;
 }
-.my-10 {
-  margin: 10px 0;
+.my-20 {
+  margin: 20px 0;
 }
 
 .xl-text {
@@ -75,10 +75,10 @@ i {
 
 hr {
   width: 40%;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-accent-color);
   margin: 30px auto;
   border: none;
-  height: 2px;
+  height: 3px;
 }
 /* END GLOBAL STYLING */
 
@@ -151,9 +151,9 @@ hr {
   position: absolute;
   left: 0;
   bottom: 10px;
-  height: 1px;
+  height: 3px;
   width: 35%; /* or 100px */
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 2px solid var(--secondary-accent-color);
 }
 
 .hero-content h2 {
@@ -208,12 +208,28 @@ hr {
 /* SERVICES SECTION STYLING */
 #services {
   background-color: var(--primary-background);
-  display: flex;
-  align-items: center;
 }
 
 #services .flex-row {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1 50%;
+}
+
+#services .flex-left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 10%;
+  justify-content: flex-start;
+}
+
+#services .flex-right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60%;
+  align-items: flex-start;
 }
 /* END SERVICES SECTION STYLING */
 
@@ -289,8 +305,52 @@ hr {
   justify-content: space-evenly;
 }
 
-.portfolio-site-img {
+.portfolio-main-img {
   display: block;
   margin: auto;
 }
 /* PORTFOLIO SECTION STYLING END */
+
+/* CONTACT SECTION STYLING */
+#contact h3 {
+  color: var(--secondary-color);
+}
+
+#contact .flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact-form {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid var(--accent-color);
+  display: block;
+  padding: 7px 15px;
+  font-size: 14px;
+  color: var(--primary-color);
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #f1f1f2;
+}
+
+.contact-form button {
+  width: 100%;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 22px;
+  border-radius: 10px;
+}
+/* END CONTACT SECTION STYLING */
