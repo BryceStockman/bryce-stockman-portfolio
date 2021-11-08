@@ -295,6 +295,11 @@ hr {
 /* END SKILLS & EXPERIENCE SECTION STYLING */
 
 /* PORTFOLIO SECTION STYLING */
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .main-img {
   margin-bottom: 20px;
 }
@@ -354,3 +359,12 @@ hr {
   border-radius: 10px;
 }
 /* END CONTACT SECTION STYLING */
+
+/* FOOTER STYLING */
+#footer {
+  height: 100px;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  padding-top: 30px;
+}
