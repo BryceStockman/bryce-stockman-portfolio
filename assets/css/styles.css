@@ -125,7 +125,6 @@ hr {
 .hero .flex-row {
   display: flex;
   flex-wrap: wrap;
-  width: 900px;
 }
 
 .hero .flex-left {
@@ -314,11 +313,12 @@ hr {
 .portfolio-main-img {
   display: block;
   margin: auto;
+  border-radius: 10px;
 }
 
 .main-img h3 {
   position: absolute;
-  margin: 500px 0 0 250px;
+  margin: 26% 0 0 15%;
   background-color: var(--accent-color);
   color: var(--white-color);
   width: 200px;
@@ -343,6 +343,9 @@ hr {
   opacity: 0.8;
 }
 
+.portfolio-items img {
+  border-radius: 10px;
+}
 /* PORTFOLIO SECTION STYLING END */
 
 /* CONTACT SECTION STYLING */
@@ -391,9 +394,277 @@ hr {
 
 /* FOOTER STYLING */
 #footer {
-  height: 100px;
+  height: 75px;
   text-align: center;
   color: var(--white-color);
   background-color: var(--accent-color);
-  padding-top: 30px;
+  padding-top: 25px;
+}
+
+/* MEDIA QUERIES */
+/* FOR NORMAL DESKTOP SIZE */
+@media screen and (max-width: 1550px) {
+  .main-img h3 {
+    position: absolute;
+    margin: 32% 0 0 9%;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    width: 200px;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  .portfolio-items {
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .main-img img {
+    width: 90%;
+  }
+
+  .main-img h3 {
+    position: absolute;
+    margin: 35% 0 0 5%;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    width: 200px;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  .portfolio-items {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  /* .hero .flex-row {
+    width: 90%;
+  } */
+
+  .hero .flex-left {
+    width: 50%;
+    padding-right: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content h3 {
+    font-size: 14px;
+  }
+
+  .hero-content lg-text {
+    font-size: 24px;
+  }
+
+  .hero-content i {
+    font-size: 24px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+
+  #about .flex-row {
+    width: 100%;
+  }
+
+  #about h2 {
+    padding-right: 10px;
+    padding-left: 40px;
+    align-items: center;
+  }
+
+  #services .flex-left {
+    width: 15%;
+  }
+
+  #contact .flex-row {
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  #contact .flex-column {
+    width: 33%;
+  }
+
+  #contact .social {
+    width: 33%;
+  }
+
+  #contact .services {
+    width: 33%;
+  }
+
+  #contact .flex-column h3 {
+    font-size: 12px;
+  }
+
+  #contact .flex-column h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+
+  .hero .flex-row {
+    justify-content: center;
+  }
+
+  .hero .flex-left {
+    width: 50%;
+  }
+
+  .hero .flex-right {
+    width: 50%;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+
+  .hero-content h3 {
+    font-size: 12px;
+  }
+
+  .hero-content lg-text {
+    font-size: 18px;
+  }
+
+  .hero-content i {
+    font-size: 24px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .main-nav h1 {
+    font-size: 20px;
+  }
+
+  .topnav ul {
+    margin-right: 0;
+  }
+
+  .topnav li a {
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 630px;
+  }
+
+  .hero .flex-row {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .hero .flex-left {
+    padding: 0;
+  }
+
+  .hero .flex-right {
+    padding: 0;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+
+  .hero-content h3 {
+    font-size: 12px;
+  }
+
+  .hero-content .lg-text {
+    font-size: 18px;
+  }
+
+  .hero-content i {
+    font-size: 18px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    margin-top: -35px;
+  }
+
+  .hero img {
+    width: 200px;
+  }
+
+  #about h4 {
+    font-size: 12px;
+  }
+
+  #about .about-tagline .lg-text {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #about h2 {
+    font-size: 16px;
+  }
+
+  #about .about-detailed {
+    font-size: 12px;
+  }
+
+  #services h2 {
+    font-size: 22px;
+  }
+
+  #services p {
+    font-size: 12px;
+  }
+
+  #services h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #services i {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -15px;
+  }
+
+  .flex-row p {
+    text-align: center;
+  }
+
+  #services .flex-row {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  #services .flex-left {
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  }
 }
