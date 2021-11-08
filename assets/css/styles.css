@@ -307,20 +307,18 @@ hr {
   margin-bottom: 20px;
 }
 
+.main-img {
+  margin: 20px auto;
+}
+
 .portfolio-main-img {
   display: block;
   margin: auto;
 }
 
-.main-img {
-  width: 60%;
-  margin: 20px auto;
-}
-
 .main-img h3 {
   position: absolute;
-  margin-top: 500px;
-  margin-left: 10px;
+  margin: 500px 0 0 250px;
   background-color: var(--accent-color);
   color: var(--white-color);
   width: 200px;
